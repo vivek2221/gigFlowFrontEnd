@@ -8,7 +8,12 @@ function Content({setVis,vis,currNotify,setCurrNotify}) {
   const [messages,setMessages]=useState([])
   const [soc,setSoc]=useState(null)
   useEffect(()=>{
-    const socket=io(import.meta.env.VITE_URL_SOCKET,{   
+    const socket=io(import.meta.env.VITE_URL_SOCKET,{  
+      reconnection: true,            
+      timeout:60000,
+  reconnectionAttempts: 10,     
+  reconnectionDelay: 1000,       
+  reconnectionDelayMax: 5000,  
   withCredentials: true,
   transports: [ "websocket"]
     })
