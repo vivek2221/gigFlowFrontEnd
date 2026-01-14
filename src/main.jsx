@@ -5,7 +5,7 @@ import './Main.css'
 import Home from './Home.jsx'
 import AllGigs from './AllGigs.jsx'
 import Mygigs from './Mygigs.jsx'
-import CreateNewGig from './createNewGig.jsx'
+import CreateNewGig from './CreateNewGig.jsx'
 const root=createRoot(document.querySelector('#root'))
 const routes=createBrowserRouter([
   {
