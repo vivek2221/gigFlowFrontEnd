@@ -1,4 +1,4 @@
-import ContentBoxMainPage from "./contentBoxMainPage"
+import ContentBoxMainPage from "./ContentBoxMainPage"
 import TopNavBar from "./TopNavBar"
 
 function Home() {

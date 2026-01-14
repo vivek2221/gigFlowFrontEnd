@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Content from "./Content"
-import ContentBoxNav from "./contentBoxNav"
+import ContentBoxNav from "./ContentBoxNav"
 
 function ContentBoxMainPage() {
   const [vis,setVis]=useState('none')
