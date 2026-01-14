@@ -8,13 +8,9 @@ function Content({setVis,vis,currNotify,setCurrNotify}) {
   const [messages,setMessages]=useState([])
   const [soc,setSoc]=useState(null)
   useEffect(()=>{
-    const socket=io(import.meta.env.VITE_URL_SOCKET,{
-  reconnection: true,            
-  reconnectionAttempts: 10,     
-  reconnectionDelay: 1000,       
-  reconnectionDelayMax: 5000,   
+    const socket=io(import.meta.env.VITE_URL_SOCKET,{   
   withCredentials: true,
-  transports: ["polling", "websocket"]
+  transports: [ "websocket"]
     })
     socket.on('message',(msg)=>{
       setMessages(prev=>([...prev,msg]))
