@@ -15,7 +15,7 @@ function Content({setVis,vis,currNotify,setCurrNotify}) {
   reconnectionDelay: 1000,       
   reconnectionDelayMax: 5000,  
   withCredentials: true,
-  transports: ["polling" , "websocket"]
+  transports: [ "websocket"]
     })
     socket.on('message',(msg)=>{
       setMessages(prev=>([...prev,msg]))
